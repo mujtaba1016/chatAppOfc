@@ -1,0 +1,7 @@
+.flex-fixed-width-item {
+    flex: 0 0 295px;
+}
+
+.flex-item-20 {
+    flex: 1 0 20%;
+}

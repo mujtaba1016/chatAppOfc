@@ -9,6 +9,35 @@ import { ChannelsComponent } from './channels/channels.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchModalComponent } from './search-modal/search-modal.component';
 import { ChatsComponent } from './chats/chats.component';
+import { LoginComponent } from './login/login.component';
+
+import { FormsModule } from '@angular/forms';
+// import { AuthService } from './auth.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import {SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedinLoginProvider } from "angular-6-social-login";
+
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+      [
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider("672998839726997")
+        },
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider("Your-Google-Client-Id")
+        },
+          {
+            id: LinkedinLoginProvider.PROVIDER_ID,
+            provider: new LinkedinLoginProvider("1098828800522-m2ig6bieilc3tpqvmlcpdvrpvn86q4ks.apps.googleusercontent.com")
+          }
+      ]);
+  return config;
+}
+
+
 
 @NgModule({
   declarations: [
@@ -17,17 +46,25 @@ import { ChatsComponent } from './chats/chats.component';
     SidebarComponent,
     ChannelsComponent,
     SearchModalComponent,
-    ChatsComponent
+    ChatsComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule,
+    HttpClientModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [{
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }],
   bootstrap: [AppComponent],
-  entryComponents: [
-  SearchModalComponent
-]
+    entryComponents: [
+      SearchModalComponent
+    ]
 })
 export class AppModule { }

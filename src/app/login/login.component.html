@@ -1,0 +1,14 @@
+<h1>Login </h1>
+<div class="col" style="width: 40%;">
+<form (submit)="loginuser($event)">
+	<label>Email</label>
+	<input type="email" class="form-control" name="email" id="email" required>
+	<label>Password</label>
+	<input type="password" class="form-control" name="password" id="password"  required><br>
+	<input type="submit" class="form-control btn btn-primary" name="submit" value="Send">
+</form>
+
+<button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+<button (click)="socialSignIn('google')">Sign in with Google</button>  
+
+</div>
