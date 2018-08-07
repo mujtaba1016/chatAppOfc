@@ -10,9 +10,14 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ChannelsComponent implements OnInit {
 
+  public name;
+  public image;
+
 constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+    this.name = localStorage.getItem('name');
+    this.image = localStorage.getItem('image');
   }
 
  openFormModal() {

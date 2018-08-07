@@ -16,7 +16,10 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AuthGuard } from './auth.guard';
+
 import {SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedinLoginProvider } from "angular-6-social-login";
+import { LogoutComponent } from './logout/logout.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -27,7 +30,7 @@ export function getAuthServiceConfigs() {
         },
         {
           id: GoogleLoginProvider.PROVIDER_ID,
-          provider: new GoogleLoginProvider("Your-Google-Client-Id")
+          provider: new GoogleLoginProvider("571556540354-mhpisnjnue2fpddi0g2mr1ieiar782t9.apps.googleusercontent.com")
         },
           {
             id: LinkedinLoginProvider.PROVIDER_ID,
@@ -48,7 +51,8 @@ export function getAuthServiceConfigs() {
     SearchModalComponent,
     ChatsComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -59,9 +63,10 @@ export function getAuthServiceConfigs() {
     SocialLoginModule
   ],
   providers: [{
-      provide: AuthServiceConfig,
-      useFactory: getAuthServiceConfigs
-    }],
+                provide: AuthServiceConfig,
+                useFactory: getAuthServiceConfigs
+              },AuthGuard]
+              ,
   bootstrap: [AppComponent],
     entryComponents: [
       SearchModalComponent
