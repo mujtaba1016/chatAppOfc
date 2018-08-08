@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { FriendsComponent } from './friends/friends.component';
 
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
 {path:'',component:LoginComponent},
 {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard]},
 {path:'login',component:LoginComponent},
-{path:'logout',component:LogoutComponent}
+{path:'logout',component:LogoutComponent},
+{path:'friends',component:FriendsComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

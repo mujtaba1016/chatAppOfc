@@ -1,3 +1,6 @@
+.container-fluid{
+		padding-right: 0;
+	}
 .flex-fixed-width-item {
     flex: 0 0 295px;
 }

@@ -1,0 +1,82 @@
+.container-fluid{
+		padding-right: 0;
+
+		.flex-fixed-width-item {
+		    flex: 0 0 295px;
+		}
+
+		.flex-item-20 {
+		    flex: 1 0 20%;
+		}
+
+
+		.chats{
+			min-height: 100vh;
+			-webkit-box-direction: normal;
+		    -webkit-box-flex: 1;
+		    -webkit-box-orient: vertical;
+		    display: -webkit-box;
+		    display: -ms-flexbox;
+		    display: inline-flex;
+		    flex: 1 1 auto;
+		    flex-direction: column;
+		    overflow: hidden;
+		    background-color: #36393f;
+		    padding: 0;
+		    color:white;
+/*		    padding-top:17px;*/
+				
+				.seperator{
+					background: #202222;
+				    height: 2px;
+				    margin-bottom: 10px;
+				    position: relative;
+				    width: 100%;
+				    float: none;
+				    margin: -3px auto;
+				}	
+
+		    	.header{
+	    		    width: 100%;
+
+				    .row{
+				    	background-color: #34373e;
+				    	padding: 20px;
+				    	.links{
+				    		display: flex;
+    						flex-direction: row;
+				    		
+				    		.link{
+				    			margin-left: 10px;
+				    		}
+
+
+				    		.add-friend{
+				    			a{
+					    			background: #7289da;
+								    color: white;	
+				    			}
+				    		}
+
+				    		a{
+				    			padding: 5px 12px 5px 12px;
+							    border-radius: 5px;
+							    background: transparent;
+							    color: #adaeb1;
+							    text-decoration-line: unset;
+				    		}
+
+				    		a:hover{
+				    			background: #2a2c31;
+				    		}
+
+
+				    		
+				    	}
+				    }		    		
+		    	}
+
+
+
+		}
+}

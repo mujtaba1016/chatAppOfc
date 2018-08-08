@@ -1,0 +1,38 @@
+		    	.row{
+		    		padding: 20px 45px;
+		    		background-color: #34373e;
+		    		border-bottom: 1px solid #26292f;
+
+		    		.heading{
+		    			color: white;
+    					padding: 0;
+		    			   h5{
+		    				font-size: 1.50rem;	
+		    			    font-weight: bold;
+		    			}
+		    		}
+
+		    		.description{
+		    			color: #adaeb1;
+		    		}
+		    		.search{
+		    				
+		    			input{
+		    				border: 1px solid #303338;
+    						background: #303338;
+    						width: 1180px;
+							padding-right: 0;
+							margin-right: 0;
+							display: inline;
+		    			}
+		    			#search{
+		    				height: 60px;
+		    			}
+		    			#submit{
+		    				margin-left: -210px;
+		    				width: 200px;
+		    				background: #7289da;
+		    				color: white;
+		    			}
+		    		}
+		    	}

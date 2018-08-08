@@ -20,6 +20,8 @@ import { AuthGuard } from './auth.guard';
 
 import {SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, LinkedinLoginProvider } from "angular-6-social-login";
 import { LogoutComponent } from './logout/logout.component';
+import { FriendsComponent } from './friends/friends.component';
+import { AddFriendComponent } from './add-friend/add-friend.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -52,7 +54,9 @@ export function getAuthServiceConfigs() {
     ChatsComponent,
     LoginComponent,
     DashboardComponent,
-    LogoutComponent
+    LogoutComponent,
+    FriendsComponent,
+    AddFriendComponent
   ],
   imports: [
     BrowserModule,
